@@ -32,7 +32,7 @@ exp.clock.wait(1000)
 Rectangle1.present(clear=True, update=False)
 Rectangle2.present(clear=False, update=True)
 
-while Rectangle1.position[0]<-50:
+while Rectangle1.position[0]<-80:
     Rectangle1.clear_surface()
     Rectangle2.clear_surface()
     Rectangle1.move((10,0))
@@ -47,8 +47,8 @@ for _ in range (400):
     Rectangle2.present(clear=False, update=True)
     exp.clock.wait(10)
 
-# Hold final display 
-exp.clock.wait(200)
+# Hold final display
+exp.clock.wait(100)
 
 # Leave it on-screen until a key is pressed
 exp.keyboard.wait()

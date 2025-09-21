@@ -42,12 +42,11 @@ while Rectangle1.position[0]<-50:
 for _ in range (400):
     Rectangle1.clear_surface()
     Rectangle2.clear_surface()
-    Rectangle2.move((10,0))
+    Rectangle2.move((30,0))
     Rectangle1.present(clear=True, update=False)
     Rectangle2.present(clear=False, update=True)
-    exp.clock.wait(10)
 
-# Hold final display 
+# Hold final display
 exp.clock.wait(200)
 
 # Leave it on-screen until a key is pressed
