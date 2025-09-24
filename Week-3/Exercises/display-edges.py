@@ -7,8 +7,24 @@ exp = design.Experiment(name = "edges")
 # Initialize the experiment: Must be done before presenting any stimulus
 control.initialize(exp)
 
-rectangle = stimuli.Rectangle(size=(100,100), colour=(255,0,0), line_width=(1), position=(-350,150))
-rectangle.present(clear = True, update = True)
+width, height = exp.screen.size
+side = 5/100*width
+sizee = (side,  side)
+
+x = (width//2) - (side//2)
+y = (height//2) - (side//2)
+
+positions = [(-x,y), (x,y), (x,-y), (-x,-y)]
+
+corners = []
+for pos in positions :
+    rectangle = stimuli.Rectangle(size=(sizee), colour=(255,0,0), line_width=(1), position=(pos))
+    corners.append(rectangle)
+
+for rectangle in corners :
+    rectangle.present(clear = False, update = False)
+
+exp.screen.update()
 
 # Leave it on-screen until a key is pressed
 exp.keyboard.wait()
