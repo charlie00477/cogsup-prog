@@ -11,24 +11,32 @@ def ternus_display(exp, radius=50, isi=50, duration=200):
     frame1 = [stimuli.Circle(radius=radius, colour=(255,255,255), position=pos) for pos in frame1_positions]
     frame2 = [stimuli.Circle(radius=radius, colour=(255,255,255), position=pos) for pos in frame2_positions]
     
-    exp.screen.clear()
-    for circle in frame1:
-        circle.present(clear=False, update=False)
-    exp.screen.update()
-    exp.clock.wait(duration)
+    while True:
+        exp.screen.clear()
+        for c in frame1:
+            c.present(clear=False, update=False)
+        exp.screen.update()
+        exp.clock.wait(duration)
 
-    exp.screen.clear()
-    exp.screen.update()
-    exp.clock.wait(isi)
+        exp.screen.clear()
+        exp.screen.update()
+        exp.clock.wait(isi)
 
-    exp.screen.clear()
-    for circle in frame2:
-        circle.present(clear=False, update=False)
-    exp.screen.update()
-    exp.clock.wait(duration)
+        exp.screen.clear()
+        for c in frame2:
+            c.present(clear=False, update=False)
+        exp.screen.update()
+        exp.clock.wait(duration)
 
-    exp.screen.clear()
-    exp.screen.update()
+        exp.screen.clear()
+        exp.screen.update()
+        exp.clock.wait(isi)
+
+        key = exp.keyboard.check()
+        if key is not None:
+            break
+
+        
 
 exp = design.Experiment(name="Ternus Display")
 control.initialize(exp)
@@ -38,9 +46,8 @@ fixation = stimuli.FixCross()
 fixation.present(clear=True, update=True)
 exp.clock.wait(1000)
 
-ternus_display(exp, radius=40, isi=50, duration=200)
-exp.clock.wait(1000)  
+ternus_display(exp, radius=50, isi=0, duration=200)
 
-exp.keyboard.wait()
+exp.keyboard.wait() 
 control.end()
     
