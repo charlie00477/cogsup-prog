@@ -1,5 +1,5 @@
 from expyriment import design, control, stimuli
-from expyriment.misc.constants import K_DOWN, K_UP, K_LEFT, K_RIGHT, C_WHITE, C_BLACK
+from expyriment.misc.constants import K_DOWN, K_UP, K_LEFT, K_RIGHT, C_WHITE, C_BLACK, K_SPACE, K_1, K_2
 
 """ Global settings """
 exp = design.Experiment(name="Blindspot", background_colour=C_WHITE, foreground_colour=C_BLACK)
@@ -20,20 +20,39 @@ def run_trial():
     radius = 75
     circle = make_circle(radius)
 
+    text = stimuli.TextScreen("Find your blind spot", "Cover your left eye, fixate the cross, move the circle with the arrows until finding your blind spot, press space when done")
+    text.present()
+    exp.keyboard.wait()
+    exp.keyboard.clear()
+
     fixation.present(True, False)
     circle.present(False, True)
 
     while True:
-        if exp.keyboard.wait(K_DOWN):
-            circle.move((0,-10))
-        if exp.keyboard.wait(K_UP):
-            circle.move((0,10))
-        if exp.keyboard.wait(K_RIGHT):
-            circle.move((10,0))
-        if exp.keyboard.wait(K_LEFT):
-            circle.move((-10,0))
+        key = exp.keyboard.check()  
 
-        exp.keyboard.wait()
+        if key == K_DOWN:
+            circle.move((0, -10))
+        elif key == K_UP:
+            circle.move((0, 10))
+        elif key == K_RIGHT:
+            circle.move((10, 0))
+        elif key == K_LEFT:
+            circle.move((-10, 0))
+        elif key == K_1: 
+            radius = max(5, radius - 5)  
+            circle = make_circle(radius, pos=circle.position)
+        elif key == K_2:  
+            radius += 5
+            circle = make_circle(radius, pos=circle.position)
+        elif key == K_SPACE:
+            break
+
+        exp.screen.clear()
+        fixation.present(clear=False, update=False)
+        circle.present(clear=False, update=True)
+
+        exp.clock.wait(20)
 
 control.start(subject_id=1)
 
