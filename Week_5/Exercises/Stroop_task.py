@@ -31,52 +31,50 @@ def run_trial():
     circle.present(False, True)
 
     while True:
-        key = exp.keyboard.check() 
-
-        key_labels = { K_LEFT: "LeftArrow", K_RIGHT: "RightArrow", K_UP: "UpArrow", K_DOWN: "DownArrow", K_1: "1", K_2: "2", K_SPACE: "Space"} 
+        key = exp.keyboard.check()  
 
         if key == K_DOWN:
             circle.move((0, -10))
             x_coord, y_coord = circle.position
             eye = "left" if x_coord < fixation.position[0] else "right"
-            key_pressed = key_labels.get(key, str(key))
+            key_pressed = key
             exp.data.add([eye, key_pressed, radius, x_coord, y_coord])
         elif key == K_UP:
             circle.move((0, 10))
             x_coord, y_coord = circle.position
             eye = "left" if x_coord < fixation.position[0] else "right"
-            key_pressed = key_labels.get(key, str(key))
+            key_pressed = key
             exp.data.add([eye, key_pressed, radius, x_coord, y_coord])
         elif key == K_RIGHT:
             circle.move((10, 0))
             x_coord, y_coord = circle.position
             eye = "left" if x_coord < fixation.position[0] else "right"
-            key_pressed = key_labels.get(key, str(key))
+            key_pressed = key
             exp.data.add([eye, key_pressed, radius, x_coord, y_coord])
         elif key == K_LEFT:
             circle.move((-10, 0))
             x_coord, y_coord = circle.position
             eye = "left" if x_coord < fixation.position[0] else "right"
-            key_pressed = key_labels.get(key, str(key))
+            key_pressed = key
             exp.data.add([eye, key_pressed, radius, x_coord, y_coord])
         elif key == K_1: 
             radius = max(5, radius - 5)  
             circle = make_circle(radius, pos=circle.position)
             x_coord, y_coord = circle.position
             eye = "left" if x_coord < fixation.position[0] else "right"
-            key_pressed = key_labels.get(key, str(key))
+            key_pressed = key
             exp.data.add([eye, key_pressed, radius, x_coord, y_coord])
         elif key == K_2:  
             radius += 5
             circle = make_circle(radius, pos=circle.position)
             x_coord, y_coord = circle.position
             eye = "left" if x_coord < fixation.position[0] else "right"
-            key_pressed = key_labels.get(key, str(key))
+            key_pressed = key
             exp.data.add([eye, key_pressed, radius, x_coord, y_coord])
         elif key == K_SPACE:
             x_coord, y_coord = circle.position
             eye = "left" if x_coord < fixation.position[0] else "right"
-            key_pressed = key_labels.get(key, str(key))
+            key_pressed = key
             exp.data.add([eye, key_pressed, radius, x_coord, y_coord])
             break
 

@@ -1,0 +1,89 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp1252
+#date: Sun Oct 12 2025 14:07:54
+#sha1: e73cc8
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='LAPTOP-EN2CSCVO', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+874,design,log,
+#design: #exp: Blindspot
+#design: #dvn: eye,key_pressed,radius_data,x_coord,y_coord
+#design: block_cnt,block_id,trial_cnt,trial_id
+874,design,logged,
+874,Experiment,started
+908,Stimulus,presented,2
+1828,Keyboard,received,32,wait
+1828,Stimulus,presented,0
+1830,Stimulus,presented,1
+1830,Stimulus,presented,0
+1841,Stimulus,presented,1
+1862,Stimulus,presented,0
+1863,Stimulus,presented,1
+1883,Stimulus,presented,0
+1885,Stimulus,presented,1
+1905,Stimulus,presented,0
+1907,Stimulus,presented,1
+1927,Stimulus,presented,0
+1929,Stimulus,presented,1
+1949,Stimulus,presented,0
+1950,Stimulus,presented,1
+1971,Stimulus,presented,0
+1972,Stimulus,presented,1
+1992,Stimulus,presented,0
+1994,Stimulus,presented,1
+2014,Stimulus,presented,0
+2015,Stimulus,presented,1
+2036,Stimulus,presented,0
+2037,Stimulus,presented,1
+2057,Stimulus,presented,0
+2059,Stimulus,presented,1
+2079,Stimulus,presented,0
+2080,Stimulus,presented,1
+2100,Stimulus,presented,0
+2101,Stimulus,presented,1
+2122,Stimulus,presented,0
+2123,Stimulus,presented,1
+2143,Stimulus,presented,0
+2145,Stimulus,presented,1
+2165,Stimulus,presented,0
+2166,Stimulus,presented,1
+2187,Stimulus,presented,0
+2188,Stimulus,presented,1
+2208,Stimulus,presented,0
+2209,Stimulus,presented,1
+2229,Stimulus,presented,0
+2230,Stimulus,presented,1
+2251,Stimulus,presented,0
+2252,Stimulus,presented,1
+2272,Stimulus,presented,0
+2273,Stimulus,presented,1
+2293,Stimulus,presented,0
+2295,Stimulus,presented,1
+2315,Stimulus,presented,0
+2316,Stimulus,presented,1
+2337,Stimulus,presented,0
+2338,Stimulus,presented,1
+2358,Stimulus,presented,0
+2359,Stimulus,presented,1
+2380,Stimulus,presented,0
+2381,Stimulus,presented,1
+2401,Stimulus,presented,0
+2402,Stimulus,presented,1
+2422,Stimulus,presented,0
+2424,Stimulus,presented,1
+2444,Stimulus,presented,0
+2447,Stimulus,presented,1
+2468,Stimulus,presented,0
+2469,Stimulus,presented,1
+2489,Stimulus,presented,0
+2490,Stimulus,presented,1
+2510,Stimulus,presented,0
+2512,Stimulus,presented,1
+2532,Stimulus,presented,0
+2533,Stimulus,presented,1
+2553,Stimulus,presented,0
+2554,Stimulus,presented,1
+2576,stderr,received,'Traceback (most recent call last):'
+2577,stderr,received,'  File "c:\\Users\\charl\\CogSup\\programming\\Assignements\\Week_5\\Exercises\\blindspot.py", line 91, in <module>\n    run_trial()\n    ~~~~~~~~~^^'
+2577,stderr,received,'  File "c:\\Users\\charl\\CogSup\\programming\\Assignements\\Week_5\\Exercises\\blindspot.py", line 59, in run_trial\n    exp.data.add([eye, key_pressed, radius, x_coord, y_coord])\n                       ^^^^^^^^^^^'
+2577,stderr,received,"UnboundLocalError: cannot access local variable 'key_pressed' where it is not associated with a value"

@@ -1,0 +1,46 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpd-file, coding: cp1252
+#date: Sun Oct 12 2025 21:56:24
+#--EXPERIMENT INFO
+#e mainfile: blindspot.py
+#e sha1: ec24b4
+#e modules: 
+#e Experiment: Blindspot
+#e no between subject factors
+#--SUBJECT INFO
+#s id: 1
+subject_id,eye,key_pressed,radius_data,x_coord,y_coord
+1,left,LeftArrow,75,-10,0
+1,left,LeftArrow,75,-20,0
+1,left,LeftArrow,75,-30,0
+1,left,LeftArrow,75,-40,0
+1,left,LeftArrow,75,-50,0
+1,left,LeftArrow,75,-60,0
+1,left,LeftArrow,75,-70,0
+1,left,LeftArrow,75,-80,0
+1,left,LeftArrow,75,-90,0
+1,left,LeftArrow,75,-100,0
+1,left,UpArrow,75,-100,10
+1,left,UpArrow,75,-100,20
+1,left,UpArrow,75,-100,30
+1,left,LeftArrow,75,-110,30
+1,left,LeftArrow,75,-120,30
+1,left,LeftArrow,75,-130,30
+1,left,1,70,-130,30
+1,left,1,65,-130,30
+1,left,1,60,-130,30
+1,left,LeftArrow,60,-140,30
+1,left,LeftArrow,60,-150,30
+1,left,LeftArrow,60,-160,30
+1,left,LeftArrow,60,-170,30
+1,left,LeftArrow,60,-180,30
+1,left,LeftArrow,60,-190,30
+1,left,DownArrow,60,-190,20
+1,left,DownArrow,60,-190,10
+1,left,1,55,-190,10
+1,left,DownArrow,55,-190,0
+1,left,DownArrow,55,-190,-10
+1,left,DownArrow,55,-190,-20
+1,left,DownArrow,55,-190,-30
+1,left,DownArrow,55,-190,-40
+1,left,1,50,-190,-40
+1,left,Space,50,-190,-40
