@@ -4,11 +4,11 @@ import random
 
 """ Constants """
 KEYS = [K_j, K_f]
-TRIAL_TYPES = 
-COLORS =
+TRIAL_TYPES = ["match","mismatch"]
+COLORS = ["red","blue","green","orange"]
 
-N_BLOCKS = 
-N_TRIALS_IN_BLOCK = 
+N_BLOCKS = 2
+N_TRIALS_IN_BLOCK = 16
 
 INSTR_START = """
 In this task, you have to indicate whether the meaning of a word and the color of its font match.
@@ -18,8 +18,8 @@ Press SPACE to continue.
 INSTR_MID = """You have finished half of the experiment, well done! Your task will be the same.\nTake a break then press SPACE to move on to the second half."""
 INSTR_END = """Well done!\nPress SPACE to quit the experiment."""
 
-FEEDBACK_CORRECT = """ """
-FEEDBACK_INCORRECT = """ """
+FEEDBACK_CORRECT = """correct """
+FEEDBACK_INCORRECT = """incorrect """
 
 """ Helper functions """
 def load(stims):
@@ -78,9 +78,9 @@ control.start(subject_id=1)
 present_instructions(INSTR_START)
 for block_id in range(1, N_BLOCKS + 1):
     for trial_id in range(1, N_TRIALS_IN_BLOCK + 1):
-        trial_type =
-        word = 
-        color = 
+        trial_type = random.choice(TRIAL_TYPES)
+        word = random.choice(COLORS)
+        color = word if trial_type == "match" else random.choice([c for c in COLORS if c !=word])
         run_trial(block_id, trial_id, trial_type, word, color)
     if block_id != N_BLOCKS:
         present_instructions(INSTR_MID)

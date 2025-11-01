@@ -1,5 +1,7 @@
 from expyriment import design, control, stimuli
 
+from drawing_functions import *
+
 
 def ternus_display(exp, radius=50, isi=50, duration=200):
     w,h = exp.screen.size

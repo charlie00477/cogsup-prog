@@ -15,7 +15,9 @@ def kanizsa_rectangle(exp, rectangle_ratio=1, rectangle_scale=1, circles_scale=1
     rect_width = width//4
     for i in range ():
         rectangle_ratio = i
-        center_rectangle = stimuli.Rectangle(size=(rect_width*rectangle_ratio, rect_height), colour=(0,0,0))
+        for j in range ():
+            rectangle_scale = j 
+            center_rectangle = stimuli.Rectangle(size=(rect_width*rectangle_ratio, rect_height), colour=(0,0,0))
     
     
 
