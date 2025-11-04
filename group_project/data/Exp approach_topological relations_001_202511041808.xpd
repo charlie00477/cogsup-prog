@@ -1,0 +1,24 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpd-file, coding: cp1252
+#date: Tue Nov 04 2025 18:08:13
+#--EXPERIMENT INFO
+#e mainfile: Exp approach_topological relations.py
+#e sha1: 1e9c08
+#e modules: 
+#e Experiment: Topology Line Shift
+#e no between subject factors
+#--SUBJECT INFO
+#s id: 1
+subject_id,set_id,trial_type,key,rt,correct
+1,15,practice,100,2184,None
+1,5,practice,100,2772,None
+1,5,diff2,100,849,None
+1,11,diff-difftopo,115,627,None
+1,17,diff-difftopo,100,1578,None
+1,13,diff-difftopo,100,1106,None
+1,2,diff-difftopo,100,926,None
+1,4,def,115,796,None
+1,5,diff-difftopo,100,1593,None
+1,18,diff2,100,1280,None
+1,9,def,115,1394,None
+1,14,diff-sametopo,100,1423,None
+1,13,def,115,955,None
