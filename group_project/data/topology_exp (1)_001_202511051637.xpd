@@ -1,0 +1,17 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpd-file, coding: cp1252
+#date: Wed Nov 05 2025 16:37:35
+#--EXPERIMENT INFO
+#e mainfile: topology_exp (1).py
+#e sha1: 3755d4
+#e modules: 
+#e Experiment: Topology Exp
+#e no between subject factors
+#--SUBJECT INFO
+#s id: 1
+subject_id,set_id,trial_type,key,rt,correct
+1,20,practice,100,963,True
+1,14,practice,100,693,True
+1,9,diff2,100,1380,True
+1,15,def,115,976,True
+1,4,def,115,817,True
+1,7,diff-difftopo,100,1047,True
