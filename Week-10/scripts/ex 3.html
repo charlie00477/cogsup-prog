@@ -58,12 +58,21 @@
       trial_duration: BLANK_DURATION,
       choices: [],
     };
+    
+    const fixationCross = {
+       type: jsPsychHtmlKeyboardResponse,
+            stimulus: '+',
+            choices: "NO_KEYS",
+            trial_duration: 500
+        
+    }
 
     let trials = createShuffledListOfTrials(STIM, NUMBER_OF_TRIALS_PER_KEY);
 
     let timeline = [helloTrial];
 
     for (let trial of trials){
+      timeline.push(fixationCross)
       timeline.push(trial);
       timeline.push(blankTrial)
     }
